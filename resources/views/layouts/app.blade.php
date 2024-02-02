@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
     <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 <body>

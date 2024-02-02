@@ -18,6 +18,14 @@
                     <li><a href="/accommodations">Accommodations</a></li>
                 </ul>
             </li>
+            <li class="mega-menu mega-menu-sm">
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="icon-folder menu-icon"></i><span class="nav-text">Contracts</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="/contracts">Contracts</a></li>
+                </ul>
+            </li>
             <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="icon-chart menu-icon"></i><span class="nav-text">Reports</span>

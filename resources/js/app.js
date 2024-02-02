@@ -1,26 +1,29 @@
-require('./bootstrap');
+import './bootstrap'
+import { createApp } from 'vue'
+import ToastrPlugin from './toastr-plugin'
 
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import AccommodationList from './components/AccommodationList.vue';
-import AccommodationDetails from './components/AccommodationDetails.vue';
-import BookingForm from './components/BookingForm.vue';
+// Vuetify
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-Vue.use(VueRouter);
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 
-const routes = [
-  { path: '/', component: AccommodationList },
-  { path: '/accommodations/:id', name: 'accommodation.details', component: AccommodationDetails },
-  { path: '/accommodations/:id/book', name: 'booking.form', component: BookingForm },
-];
+const app = createApp({})
 
-const router = new VueRouter({
-  mode: 'history',
-  routes,
-});
+app.use(ToastrPlugin)
 
-const app = new Vue({
-  el: '#app',
-  router,
-});
 
+import AccommodationComponent from './components/AccommodationComponent.vue';
+app.component('accommodation-component', AccommodationComponent);
+
+import ContractComponent from './components/ContractComponent.vue';
+app.component('contract-component', ContractComponent);
+
+
+app.use(vuetify).mount('#app')
