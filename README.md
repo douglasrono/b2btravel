@@ -100,8 +100,7 @@
 
 ## Run database migrations:
  ```bash
-
-       php artisan migrate
+        php artisan migrate
 
 
 
