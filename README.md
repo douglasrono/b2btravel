@@ -80,39 +80,37 @@
 ## Navigate to the Laravel project directory:
 
  ```bash
-     cd b2btravel
+    cd b2btravel
 
 ## Install backend dependencies:
 
  ```bash
-     cd composer install
+    cd composer install
 ## Copy the .env.example file and create a new .env file:
 
  ```bash
-      cp .env.example .env
+    cp .env.example .env
 
  ## Generate the application key:  
  ```bash
 
-     php artisan key:generate
+    php artisan key:generate
    
 ## Configure the database settings in the .env file.
 
 ## Run database migrations:
  ```bash
-        php artisan migrate
+    php artisan migrate
 
 
 
 ##  Frontend Setup
  ```bash
-
-        Install frontend dependencies:
+    Install frontend dependencies:
 ## Build the frontend assets:
 
  ```bash
-
-       npm run dev
+    npm run dev
 ## Start the Laravel development server:     
  ```bash
-        php artisan serve
+    php artisan serve
