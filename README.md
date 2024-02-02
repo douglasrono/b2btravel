@@ -82,36 +82,34 @@
  ```bash
     cd b2btravel
 
-  Install backend dependencies:
+Install backend dependencies:
 
- ```bash
     cd composer install
-
- Copy the .env.example file and create a new .env file:
+   Copy the .env.example file and create a new .env file:
 
  ```bash
     cp .env.example .env
 
- Generate the application key:  
+ ## Generate the application key:  
  ```bash
 
     php artisan key:generate
    
- Configure the database settings in the .env file.
+## Configure the database settings in the .env file.
 
- Run database migrations:
+## Run database migrations:
  ```bash
     php artisan migrate
 
 
 
- Frontend Setup
+##  Frontend Setup
  ```bash
     Install frontend dependencies:
-Build the frontend assets:
+## Build the frontend assets:
 
  ```bash
     npm run dev
-Start the Laravel development server:     
+## Start the Laravel development server:     
  ```bash
     php artisan serve
