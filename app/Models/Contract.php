@@ -1,18 +1,15 @@
 <?php
 
+// app\Models\Contract.php
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Contract extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'rate',
-        'start_date',
-        'end_date',
+        'rate', 'start_date', 'end_date', 'accommodation_id', 'travel_agent_id',
     ];
 
     // Relationship with Accommodation
@@ -21,9 +18,10 @@ class Contract extends Model
         return $this->belongsTo(Accommodation::class);
     }
 
-    // Relationship with TravelAgent
+    // Relationship with Travel Agent
     public function travelAgent()
     {
-        return $this->belongsTo(TravelAgent::class);
+        return $this->belongsTo(User::class, 'travel_agent_id');
     }
 }
+

@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2>Accommodations</h2>
+    <div class="mx-2">
+        <h2>Accommodations</h2>
     <ul>
         @foreach($accommodations as $accommodation)
             <li>
@@ -23,4 +24,5 @@
             </li>
         @endforeach
     </ul>
+    </div>
 @endsection

@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Accommodation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\AccommodationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,8 @@ use App\Http\Controllers\BookingController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
-    Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+    Route::get('/accommodations', [AccommodationController::class, 'index']);
+    Route::post('/accommodations', [AccommodationController::class, 'store']);
 });
 
 
